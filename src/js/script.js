@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
   p_2.style.display = "none"
 
   const calculateResults = () => {
-    let content_1 = textarea1.value
+    // get the text from textarea and trim it
+    let content_1 = textarea1.value.trim()
+    // get the length from the array created with split method
     let splitContent_1 = content_1.split(' ').length
-    let content_2 = textarea2.value
+    let content_2 = textarea2.value.trim()
     let splitContent_2 = content_2.split(' ').length
-    
+
     if (splitContent_1 > 1) {
       p_1.style.display = "block"
       words_1.textContent = `${splitContent_1}`
@@ -33,6 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.onclick = calculateResults;
 
-  
+
 
 })
