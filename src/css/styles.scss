@@ -1,0 +1,87 @@
+// COLORS
+$gray: #eff5f7;
+$vintage: #f4f4f0;
+// FONTS
+$playfair: "Playfair Display", serif;
+
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: $playfair;
+  background-color: $vintage;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+.analyze {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .analyze-button {
+    background-color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 4rem 0 4rem 0;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $vintage;
+      box-shadow: 0.25rem 0.25rem #000;
+    }
+  }
+}
+
+.info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.text-areas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  .text-area {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    resize: none;
+    border: none;
+    height: 30rem;
+    font-family: $playfair;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 1rem;
+    transition: 0.3s;
+    border-radius: 5px;
+
+    &:focus {
+      outline: 0;
+      border: 1px solid black;
+      background-color: $vintage;
+      box-shadow: 0.35rem 0.35rem #000;
+    }
+  }
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  .results-text {
+    text-align: center;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+}

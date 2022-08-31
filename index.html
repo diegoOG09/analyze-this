@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <title>Analyze This</title>
+</head>
+
+<body>
+  <div class="analyze container">
+    <h1 id="button" class="analyze-button">Analyze this</h1>
+  </div>
+
+  <div class="info container">
+    📜 Con "Analyze this" puedes analizar hasta 2 textos al mismo tiempo 📜
+  </div>
+
+  <div class="text-areas container">
+    <textarea class="text-area" name="" id="textarea-1"></textarea>
+    <textarea class="text-area" name="" id="textarea-2"></textarea>
+  </div>
+
+  <div id="results" class="container">
+    <div class="results-text">
+      <p id="result-1">El texto 1 tiene <span id="words-1">350</span> palabras.</p>
+    </div>
+    <div class="results-text">
+      <p id="result-2">El texto 2 tiene <span id="words-2">200</span> palabras.</p>
+    </div>
+  </div>
+
+
+  <script src="src/js/script.js"></script>
+</body>
+
+</html>
