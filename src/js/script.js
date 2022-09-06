@@ -1,40 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // VARIALBES
   const textarea1 = document.querySelector('#textarea-1')
   const textarea2 = document.querySelector('#textarea-2')
   const button = document.getElementById('button')
-  const resultsDiv = document.getElementById('results')
-  const words_1 = document.getElementById('words-1')
-  const words_2 = document.getElementById('words-2')
+  const countedWords1 = document.getElementById('words-1')
+  const countedWords2 = document.getElementById('words-2')
   const p_1 = document.getElementById('result-1')
   const p_2 = document.getElementById('result-2')
+  const resultsDiv1 = document.querySelector('.results-text-1')
+  const resultsDiv2 = document.querySelector('.results-text-2')
 
-
-  // hiding the results p
   p_1.style.display = "none"
   p_2.style.display = "none"
 
-  const calculateResults = () => {
-    // get the text from textarea and trim it
+  function calculateText1() {
     let content_1 = textarea1.value.trim()
-    // get the length from the array created with split method
     let splitContent_1 = content_1.split(' ').length
-    let content_2 = textarea2.value.trim()
-    let splitContent_2 = content_2.split(' ').length
 
     if (splitContent_1 > 1) {
       p_1.style.display = "block"
-      words_1.textContent = `${splitContent_1}`
-    }
-    if (splitContent_2 > 1) {
-      p_2.style.display = "block"
-      words_2.textContent = `${splitContent_2}`
+      countedWords1.textContent = `${splitContent_1}`
     }
   }
 
-  button.onclick = calculateResults;
+  function calculateText2() {
+    let content_2 = textarea2.value.trim()
+    let splitContent_2 = content_2.split(' ').length
 
+    if (splitContent_2 > 1) {
+      p_2.style.display = "block"
+      countedWords2.textContent = `${splitContent_2}`
+    }
+  }
 
+  function checkPalindrome(string) {
+    const arrayValues = string.split('');
+    const reverseArrayValues = arrayValues.reverse();
+    const reverseString = reverseArrayValues.join('');
+
+    if (string === reverseString) {
+      console.log('It is a palindrome');
+    }
+    else {
+      console.log('It is not a palindrome');
+    }
+  }
+  
+  function palindrome() {
+    let content_1 = textarea1.value.trim().split(' ')
+    content_1.forEach(element => {
+      checkPalindrome(element)
+    });
+  }
+
+  function calculateResults() {
+    calculateText1()
+    calculateText2()
+    palindrome()
+  }
+
+  button.onclick = calculateResults
 
 })
+
+let contador = 0
+function suma() {
+  
+  array = [1,2,3,4,5]
+  array.forEach(element => {
+    console.log(element)
+    contador += 1
+  })
+  return `El contador se incremento ${contador} veces`
+}
+
+// console.log(suma())

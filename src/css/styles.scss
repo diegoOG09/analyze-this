@@ -27,7 +27,6 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     border: 1px solid black;
-    border-radius: 5px;
     text-align: center;
     margin: 4rem 0 4rem 0;
     transition: 0.3s;
@@ -59,7 +58,6 @@ body {
     font-weight: 400;
     padding: 1rem;
     transition: 0.3s;
-    border-radius: 5px;
 
     &:focus {
       outline: 0;
@@ -75,13 +73,8 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 
-  .results-text {
+  .result {
     text-align: center;
     font-weight: 500;
-
-    span {
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
   }
 }

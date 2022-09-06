@@ -22,7 +22,6 @@ body {
   cursor: pointer;
   padding: 0.5rem;
   border: 1px solid black;
-  border-radius: 5px;
   text-align: center;
   margin: 4rem 0 4rem 0;
   transition: 0.3s;
@@ -53,7 +52,6 @@ body {
   font-weight: 400;
   padding: 1rem;
   transition: 0.3s;
-  border-radius: 5px;
 }
 .text-areas .text-area:focus {
   outline: 0;
@@ -67,11 +65,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-#results .results-text {
+#results .result {
   text-align: center;
   font-weight: 500;
-}
-#results .results-text span {
-  font-weight: 700;
-  font-size: 1.5rem;
 }/*# sourceMappingURL=styles.css.map */
