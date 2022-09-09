@@ -5,20 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('button')
   const countedWords1 = document.getElementById('words-1')
   const countedWords2 = document.getElementById('words-2')
-  const p_1 = document.getElementById('result-1')
-  const p_2 = document.getElementById('result-2')
   const resultsDiv1 = document.querySelector('.results-text-1')
   const resultsDiv2 = document.querySelector('.results-text-2')
+  const palindromes1 = document.querySelector('.palindromes-1')
+  const palindromes2 = document.querySelector('.palindromes-2')
 
-  p_1.style.display = "none"
-  p_2.style.display = "none"
+  resultsDiv1.style.display = "none"
+  resultsDiv2.style.display = "none"
 
   function calculateText1() {
     let content_1 = textarea1.value.trim()
     let splitContent_1 = content_1.split(' ').length
 
     if (splitContent_1 > 1) {
-      p_1.style.display = "block"
+      resultsDiv1.style.display = "block"
       countedWords1.textContent = `${splitContent_1}`
     }
   }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let splitContent_2 = content_2.split(' ').length
 
     if (splitContent_2 > 1) {
-      p_2.style.display = "block"
+      resultsDiv2.style.display = "block"
       countedWords2.textContent = `${splitContent_2}`
     }
   }
@@ -39,18 +39,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const reverseString = reverseArrayValues.join('');
 
     if (string === reverseString) {
-      console.log('It is a palindrome');
+      return true
     }
     else {
-      console.log('It is not a palindrome');
+      return false
     }
   }
-  
+
   function palindrome() {
+    let count1 = 0
+    let count2 = 0
     let content_1 = textarea1.value.trim().split(' ')
+    let content_2 = textarea2.value.trim().split(' ')
     content_1.forEach(element => {
-      checkPalindrome(element)
+      if (checkPalindrome(element)) {
+        count1 += 1
+      }
     });
+    content_2.forEach(element => {
+      if (checkPalindrome(element)) {
+        count2 += 1
+      }
+    })
+    palindromes1.textContent = `El texto tiene ${count1} palindromos`
+    palindromes2.textContent = `El texto tiene ${count2} palindromos`
   }
 
   function calculateResults() {
@@ -65,8 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let contador = 0
 function suma() {
-  
-  array = [1,2,3,4,5]
+
+  array = [1, 2, 3, 4, 5]
   array.forEach(element => {
     console.log(element)
     contador += 1
