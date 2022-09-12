@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const palindromes1 = document.querySelector('.palindromes-1')
   const palindromes2 = document.querySelector('.palindromes-2')
 
+
   resultsDiv1.style.display = "none"
   resultsDiv2.style.display = "none"
 
@@ -69,21 +70,27 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateText1()
     calculateText2()
     palindrome()
+
+    const upper1 = document.getElementById('upper-1')
+    const upper2 = document.getElementById('upper-2')
+    const lower1 = document.getElementById('lower-1')
+    const lower2 = document.getElementById('lower-2')
+    upper1.onclick = function() {
+      textarea1.value = textarea1.value.toUpperCase()
+    }
+    upper2.onclick = function() {
+      textarea2.value = textarea2.value.toUpperCase()
+    }
+    lower1.onclick = function() {
+      textarea1.value = textarea1.value.toLowerCase()
+    }
+    lower2.onclick = function() {
+      textarea2.value = textarea2.value.toLowerCase()
+    }
   }
+  
 
   button.onclick = calculateResults
 
+
 })
-
-let contador = 0
-function suma() {
-
-  array = [1, 2, 3, 4, 5]
-  array.forEach(element => {
-    console.log(element)
-    contador += 1
-  })
-  return `El contador se incremento ${contador} veces`
-}
-
-// console.log(suma())
