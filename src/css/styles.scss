@@ -30,10 +30,12 @@ body {
     text-align: center;
     margin: 4rem 0 4rem 0;
     transition: 0.3s;
+    background-color: $vintage;
+    box-shadow: 0.25rem 0.25rem #000;
 
     &:hover {
-      background-color: $vintage;
-      box-shadow: 0.25rem 0.25rem #000;
+      background-color: white;
+      box-shadow: 0rem 0rem white;
     }
   }
 }
@@ -77,6 +79,16 @@ body {
     text-align: center;
     font-weight: 500;
     .mayus {
+      border: 1px solid black;
+      padding: 0.5rem;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0.25rem 0.25rem #000;
+        cursor: pointer;
+      }
+    }
+    .buttonCopy {
+      cursor: pointer;
       border: 1px solid black;
       padding: 0.5rem;
       transition: 0.3s;

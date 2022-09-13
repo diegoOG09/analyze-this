@@ -25,10 +25,12 @@ body {
   text-align: center;
   margin: 4rem 0 4rem 0;
   transition: 0.3s;
-}
-.analyze .analyze-button:hover {
   background-color: #f4f4f0;
   box-shadow: 0.25rem 0.25rem #000;
+}
+.analyze .analyze-button:hover {
+  background-color: white;
+  box-shadow: 0rem 0rem white;
 }
 
 .info {
@@ -75,6 +77,16 @@ body {
   transition: 0.3s;
 }
 #results .result .mayus:hover {
+  box-shadow: 0.25rem 0.25rem #000;
+  cursor: pointer;
+}
+#results .result .buttonCopy {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+#results .result .buttonCopy:hover {
   box-shadow: 0.25rem 0.25rem #000;
   cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

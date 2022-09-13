@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const resultsDiv2 = document.querySelector('.results-text-2')
   const palindromes1 = document.querySelector('.palindromes-1')
   const palindromes2 = document.querySelector('.palindromes-2')
-
+  const text1 = document.querySelector('#textarea-1').value
+  const text2 = document.querySelector('#textarea-2').value
 
   resultsDiv1.style.display = "none"
   resultsDiv2.style.display = "none"
@@ -75,22 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const upper2 = document.getElementById('upper-2')
     const lower1 = document.getElementById('lower-1')
     const lower2 = document.getElementById('lower-2')
-    upper1.onclick = function() {
+    const buttonCopy1 = document.getElementById('copy-1')
+    const buttonCopy2 = document.getElementById('copy-2')
+
+    upper1.onclick = function () {
       textarea1.value = textarea1.value.toUpperCase()
     }
-    upper2.onclick = function() {
+    upper2.onclick = function () {
       textarea2.value = textarea2.value.toUpperCase()
     }
-    lower1.onclick = function() {
+    lower1.onclick = function () {
       textarea1.value = textarea1.value.toLowerCase()
     }
-    lower2.onclick = function() {
+    lower2.onclick = function () {
       textarea2.value = textarea2.value.toLowerCase()
     }
+
+    buttonCopy1.onclick = function() {
+      navigator.clipboard.writeText(textarea1.value)
+    }
+    buttonCopy2.onclick = function() {
+      navigator.clipboard.writeText(textarea2.value)
+    }
   }
-  
+
 
   button.onclick = calculateResults
-
 
 })
